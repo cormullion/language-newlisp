@@ -1,0 +1,197 @@
+# version of 2014-03-07 10:04:47
+
+'fileTypes': [
+  'lsp'
+]
+'name': 'newLISP'
+'firstLineMatch': '^#!/.*\\bnewlisp\\b',
+'foldingStartMarker': '(?x)^ [ \\t]* \\(\n\t  (?<par>\n\t    ( [^()\\n]++ | \\( \\g<par> \\)? )*+\n\t  )\n\t$'
+'foldingStopMarker': '^\\s*$'
+
+'patterns': [
+  {
+    'match': ';+ (mark|\\!).*'
+    'name': 'comment.line.marker.newlisp'
+  }
+
+  {
+    'match': ';.*TODO:.*'
+    'name': 'comment.line.todo.newlisp'
+  }
+
+  {
+    'match': '^;; .*$\\n?'
+    'name': 'comment.doc.newlisp'
+  }
+
+  {
+    'captures':
+      '1':
+        'name': 'punctuation.definition.comment.newlisp'
+    'match': '(;|#).*$\\n?'
+    'name': 'comment.line.semicolon.newlisp'
+  }
+
+  {
+    'captures':
+      '1':
+        'name': 'punctuation.definition.constant.newlisp'
+    'match': '(#)(\\w|[\\\\+-=<>\'"&#])+'
+    'name': 'constant.character.newlisp'
+  }
+
+  {
+    'captures':
+      '1':
+        'name': 'punctuation.definition.variable.newlisp'
+      '3':
+        'name': 'punctuation.definition.variable.newlisp'
+    'match': '(\\*)(\\S*)(\\*)'
+    'name': 'variable.other.global.newlisp'
+  }
+
+  {
+    'captures':
+      '1':
+        'name': 'entity.quote.newlisp'
+    'match': '(?<=\'\\()([^\\(\\d"][\\w/\\-\\!\\?\\.\\+\\*:<>=]+)'
+  }
+
+  {
+    'match': '\\('
+    'name': 'entity.paren.newlisp'
+  }
+
+  {
+    'match': '\\)'
+    'name': 'entity.paren.newlisp'
+  }
+
+  # it has been known for functions I'm still using to be deprecated ... they go here :)
+  {
+    'match': '\\b(?i:parse-date|nth-set|set-nth)\\b'
+    'name': 'invalid.deprecated.newlisp'
+  }
+
+  # all functions ending "?" are here
+  {
+    'match': '\\b(array\\?|atom\\?|bigint\\?|context\\?|directory\\?|empty\\?|even\\?|file\\?|float\\?|global\\?|inf\\?|integer\\?|lambda\\?|legal\\?|list\\?|macro\\?|NaN\\?|nil\\?|null\\?|odd\\?|number\\?|primitive\\?|protected\\?|quote\\?|string\\?|symbol\\?|true\\?|zero\\?)'
+    'name': 'keyword.control.boolean-test.newlisp'
+  }
+
+  # in this section, storage, I've put things to do with definitions, setting values etc...
+  {
+    'match': '\\b(Class|fn|context|define-macro|define|def-new|lambda-macro|lambda|macro|new|self|set-ref-all|set-ref|setf|setq|set-locale|set|Tree|MAIN)\\b'
+    'name': 'keyword.control.function.newlisp'
+  }
+
+  # all keywords useful for controlling the flow here
+  {
+    'match': '\\b(abort|and|begin|case|catch|cond|if-not|if|do-until|do-while|doargs|dolist|dostring|dotimes|dotree|for-all|for|or|not|throw-error|throw|unless|until|when|while)\\b'
+    'name': 'keyword.control.newlisp'
+  }
+
+  # all other keywords here, hyphenated versions should come before unhyphenated ones
+  {
+    'match': '\\b(abs|acos|acosh|add|address|amb|append-file|append|apply|args|array-list|array|asin|asinh|assoc|atan|atan2|atanh|base64-dec|base64-enc|bayes-query|bayes-train|beta|betai|bigint|bind|binomial|bits|callback|ceil|change-dir|char|chop|clean|close|command-event|cons|constant|copy-file|copy|corr|cos|cosh|count|cpymem|crc32|crit-chi2|crit-f|crit-t|crit-z|current-line|curry|date-list|date-parse|date-value|date|debug|dec|default|delete-file|delete-url|delete|destroy|det|device|difference|directory|div|dump|dup|encrypt|ends-with|env|erf|error-event|eval-string|eval|exec|exists|exit|exp|expand|explode|extend|factor|fft|file-info|filter|find-all|find|first|flat|float|floor|flt|fork|format|fv|gammai|gammaln|gcd|get-char|get-float|get-int|get-long|get-string|get-url|global|ifft|import|inc|index|int|integer|intersect|invert|irr|join|json-error|json-parse|kmeans-query|kmeans-train|last-error|last|length|let|letex|letn|list|load|local|log|lookup|lower-case|main-args|make-dir|map|mat|match|max|member|min|mod|module|mul|multiply|net-accept|net-close|net-connect|net-error|net-eval|net-interface|net-ipv|net-listen|net-local|net-lookup|net-packet|net-peek|net-peer|net-ping|net-receive-udp|net-receive-from|net-receive|net-select|net-send-to|net-send-udp|net-send|net-service|net-sessions|nil|normal|now|nper|npv|nth|open|ostype|pack|parse|parse-date|peek|pipe|pmt|pop-assoc|pop|post-url|pow|prefix|pretty-print|print|println|prob-chi2|prob-f|prob-t|prob-z|process|prompt-event|push|put-url|pv|quote|rand|random|randomize|read-buffer|read-char|read-expr|read-file|read-key|read-line|read-utf8|read|reader-event|real-path|receive|ref-all|ref|regex-comp|regex|remove-dir|rename-file|replace|reset|rest|reverse|rotate|round|save|search|seed|seek|select|semaphore|send|sequence|series|set-locale|sgn|share|signal|silent|sin|sinh|sleep|slice|sort|source|spawn|sqrt|starts-with|stats|string|struct|sub|swap|sym|symbols|syms|sync|sys-error|sys-info|t-test|tan|tanh|term|time-of-day|time|timer|title-case|trace-highlight|trace|transpose|trim|true|unicode|unify|union|unique|unpack|upper-case|utf8|utf8len|uuid|wait-pid|write-buffer|write-char|write-file|write-line|write|xfer-event|xml-error|xml-parse|xml-type-tags)\\b'
+    'name': 'keyword.other.newlisp'
+  }
+
+  # operator type things
+  {
+  'match': '(!|!=|\\$0|\\$1|\\$10|\\$11|\\$12|\\$13|\\$14|\\$15|\\$2|\\$3|\\$4|\\$5|\\$6|\\$7|\\$8|\\$9|\\$args|\\$count|\\$idx|\\$it|\\$main-args|\\$|--|\\||~|%|&|\\*|\\+|\\+\\+|\\-|\\-\\-|<|<<|<=|=|>|>=|>>|\\?|@|\\^)'
+  'name': 'keyword.operator.newlisp'
+  }
+
+  # TODO: the symbol regex unfortunately highlights the 'set' in a variable such as 'set-value'
+  # because 'set' was earlier defined as a keyword
+
+  {
+    'match': '[a-z_\\-A-Z\\*][\\d\\w\\-\\!\\?\\*:<>=]+'
+    'name': 'entity.symbol.newlisp'
+  }
+
+  {
+    'match': '[+-]?\\b(((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f|ll|LL|ull|ULL)?)\\b'
+    'name': 'constant.numeric.newlisp'
+  }
+
+  {
+    'begin': '"'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.newlisp'
+    'end': '"'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.newlisp'
+    'name': 'string.quoted.double.newlisp'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.newlisp'
+      }
+    ]
+  }
+
+  # strings
+
+  'escaped_char':
+      'match': '\\\\.'
+      'name': 'constant.character.escape.newlisp'
+
+  # [text] string
+  {
+    'begin': '\\[text\\]'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.newlisp'
+    'end': '\\[\\/text\\]'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.newlisp'
+    'name': 'string.quoted.other.newlisp'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.newlisp'
+      }
+    ]
+  }
+
+  # braced string - I can only work out how to do a single level of escaping these
+  {
+    'begin': '{'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.newlisp'
+    'name': 'string.quoted.brace.newlisp'
+    'end': '}'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.newlisp'
+    'patterns': [
+      {
+        'include': '#escaped_char'
+      }
+      {
+      'begin': '{'
+      'beginCaptures':
+        '0':
+          'name': 'punctuation.definition.string.begin.newlisp'
+      'name': 'string.quoted.brace.newlisp'
+      'end': '}'
+      'endCaptures':
+        '0':
+          'name': 'punctuation.definition.string.end.newlisp'
+      }
+    ]
+  }
+
+  {
+    'match': ''
+    'name': 'entity.marker.newlisp'
+  }
+]
+
+'scopeName': 'source.newlisp'

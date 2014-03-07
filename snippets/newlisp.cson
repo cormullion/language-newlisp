@@ -1,0 +1,46 @@
+'.source.newlisp':
+  'and':
+    'prefix': 'and'
+    'body': '(and ($1)$2)'
+  'begin':
+    'prefix': 'begin'
+    'body': '(begin\n\t($0)\n)'
+  'const':
+    'prefix': 'const'
+    'body': '(constant \'${1:var} ${2:value})'
+  'define':
+    'prefix': 'def'
+    'body': '(define (${1:func-name} ${2:parameters})\n\t($0)\n)'
+  'define-macro':
+    'prefix': 'defm'
+    'body': '(define-macro (${1:func-name} ${2:parameters})\n\t($0)\n)'
+  'dolist':
+    'prefix': 'dolist'
+    'body': '(dolist (${1:item} ${2:list})\n\t($0)\n)'
+  'dotimes':
+    'prefix': 'dotimes'
+    'body': '(dotimes (${1:i} ${2:10})\n\t($0)\n)'
+  'for':
+    'prefix': 'for'
+    'body': '(for (${1:i} ${2:0} ${3:10})\n\t($0)\n)'
+  'if':
+    'prefix': 'if'
+    'body': '(if (${1:cond} $2)\n\t($0)\n)'
+  'if-not':
+    'prefix': 'ifn'
+    'body': '(if-not (${1:cond} $2)\n\t($0)\n)'
+  'let':
+    'prefix': 'let'
+    'body': '(let (${1:var} ${2:val})\n\t($0)\n)'
+  'set':
+    'prefix': 'set'
+    'body': '(set \'${1:var} ${2:value})'
+  'setf':
+    'prefix': 'setf'
+    'body': '(setf ${1:var} ${2:value})'
+  'tree':
+    'prefix': 'tree'
+    'body': '(new Tree \'${1:Name})'
+  'while':
+    'prefix': 'while'
+    'body': '(while (${1:cond})\n\t($0)\n)'
