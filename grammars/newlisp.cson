@@ -1,1399 +1,191 @@
-'.source.newlisp':
-        'abort':
-          'prefix': 'abort'
-          'body': 'abort <int-pid> '
-    
-        'abs':
-          'prefix': 'abs'
-          'body': 'abs <num>'
-    
-        'acos':
-          'prefix': 'acos'
-          'body': 'acos <num-radians>'
-    
-        'acosh':
-          'prefix': 'acosh'
-          'body': 'acosh <num-radians>'
-    
-        'add':
-          'prefix': 'add'
-          'body': 'add <num-1> [<num-2>  ]'
-    
-        'address':
-          'prefix': 'address'
-          'body': 'address <int> '
-    
-        'amb':
-          'prefix': 'amb'
-          'body': 'amb <exp-1> [<exp-2>  ]'
-    
-        'and':
-          'prefix': 'and'
-          'body': 'and <exp-1> [<exp-2>  ]'
-    
-        'append':
-          'prefix': 'append'
-          'body': 'append <list-1> [<list-2>  ] '
-    
-        'append-file':
-          'prefix': 'append-file'
-          'body': 'append-file <str-filename> <str-buffer>'
-    
-        'apply':
-          'prefix': 'apply'
-          'body': 'apply <func> <list> [<int-reduce>]'
-    
-        'args':
-          'prefix': 'args'
-          'body': 'args '
-    
-        'array':
-          'prefix': 'array'
-          'body': 'array <int-n1> [<int-n2>  ] [<list-init>]'
-    
-        'array-list':
-          'prefix': 'array-list'
-          'body': 'array-list <array>'
-    
-        'array?':
-          'prefix': 'array?'
-          'body': 'array? <exp>'
-    
-        'asin':
-          'prefix': 'asin'
-          'body': 'asin <num-radians>'
-    
-        'asinh':
-          'prefix': 'asinh'
-          'body': 'asinh <num-radians>'
-    
-        'assoc':
-          'prefix': 'assoc'
-          'body': 'assoc <exp-key> <list-alist> '
-    
-        'atan':
-          'prefix': 'atan'
-          'body': 'atan <num-radians>'
-    
-        'atan2':
-          'prefix': 'atan2'
-          'body': 'atan2 <num-Y-radians> <num-X-radians>'
-    
-        'atanh':
-          'prefix': 'atanh'
-          'body': 'atanh <num-radians>'
-    
-        'atom?':
-          'prefix': 'atom?'
-          'body': 'atom? <exp>'
-    
-        'base64-dec':
-          'prefix': 'base64-dec'
-          'body': 'base64-dec <str>'
-    
-        'base64-enc':
-          'prefix': 'base64-enc'
-          'body': 'base64-enc <str> [<bool-flag>]'
-    
-        'bayes-query':
-          'prefix': 'bayes-query'
-          'body': 'bayes-query <list-L> <context-D> [<bool-chain> [<bool-probs>]]'
-    
-        'bayes-train':
-          'prefix': 'bayes-train'
-          'body': 'bayes-train <list-M1> [<list-M2>  ] <sym-context-D>'
-    
-        'begin':
-          'prefix': 'begin'
-          'body': 'begin <body>'
-    
-        'beta':
-          'prefix': 'beta'
-          'body': 'beta <cum-a> <num-b>'
-    
-        'betai':
-          'prefix': 'betai'
-          'body': 'betai <num-x> <num-a> <num-b>'
-    
-        'bigint':
-          'prefix': 'bigint'
-          'body': 'bigint <number> '
-    
-        'bigint?':
-          'prefix': 'bigint?'
-          'body': 'bigint? <number>'
-    
-        'bind':
-          'prefix': 'bind'
-          'body': 'bind <list-variable-associations> [<bool-eval>]'
-    
-        'binomial':
-          'prefix': 'binomial'
-          'body': 'binomial <int-n> <int-k> <float-p>'
-    
-        'bits':
-          'prefix': 'bits'
-          'body': 'bits <int> [<bool>]'
-    
-        'callback':
-          'prefix': 'callback'
-          'body': 'callback <int-index> <sym-function> '
-    
-        'case':
-          'prefix': 'case'
-          'body': 'case <exp-switch>  <exp-1> <body-1>  [ <exp-2> <body-2>   ]'
-    
-        'catch':
-          'prefix': 'catch'
-          'body': 'catch <exp> '
-    
-        'ceil':
-          'prefix': 'ceil'
-          'body': 'ceil <number>'
-    
-        'change-dir':
-          'prefix': 'change-dir'
-          'body': 'change-dir <str-path>'
-    
-        'char':
-          'prefix': 'char'
-          'body': 'char <str> [<int-index> [true]] '
-    
-        'chop':
-          'prefix': 'chop'
-          'body': 'chop <str> [<int-chars>] '
-    
-        'clean':
-          'prefix': 'clean'
-          'body': 'clean <exp-predicate> <list>'
-    
-        'close':
-          'prefix': 'close'
-          'body': 'close <int-file>'
-    
-        'command-event':
-          'prefix': 'command-event'
-          'body': 'command-event <sym-event-handler> | <func-event-handler>'
-    
-        'cond':
-          'prefix': 'cond'
-          'body': 'cond  <exp-condition-1> <body-1>  [ <exp-condition-2> <body-2>   ]'
-    
-        'cons':
-          'prefix': 'cons'
-          'body': 'cons <exp-1> <exp-2>'
-    
-        'constant':
-          'prefix': 'constant'
-          'body': 'constant <sym-1> <exp-1> [<sym-2> <exp-2>]'
-    
-        'context':
-          'prefix': 'context'
-          'body': 'context [<sym-context>] '
-    
-        'context?':
-          'prefix': 'context?'
-          'body': 'context? <exp> '
-    
-        'copy':
-          'prefix': 'copy'
-          'body': 'copy <exp>'
-    
-        'copy-file':
-          'prefix': 'copy-file'
-          'body': 'copy-file <str-from-name> <str-to-name>'
-    
-        'corr':
-          'prefix': 'corr'
-          'body': 'corr <list-vector-X> <list-vector-Y>'
-    
-        'cos':
-          'prefix': 'cos'
-          'body': 'cos <num-radians>'
-    
-        'cosh':
-          'prefix': 'cosh'
-          'body': 'cosh <num-radians>'
-    
-        'count':
-          'prefix': 'count'
-          'body': 'count <list-1> <list-2>'
-    
-        'cpymem':
-          'prefix': 'cpymem'
-          'body': 'cpymem <int-from-address> <int-to-address> <int-bytes>'
-    
-        'crc32':
-          'prefix': 'crc32'
-          'body': 'crc32 <str-data>'
-    
-        'crit-chi2':
-          'prefix': 'crit-chi2'
-          'body': 'crit-chi2 <num-probability> <int-df>'
-    
-        'crit-f':
-          'prefix': 'crit-f'
-          'body': 'crit-f <num-probability> <int-df1> <int-df2>'
-    
-        'crit-t':
-          'prefix': 'crit-t'
-          'body': 'crit-t <num-probability> <int-df>'
-    
-        'crit-z':
-          'prefix': 'crit-z'
-          'body': 'crit-z <num-probability>'
-    
-        'current-line':
-          'prefix': 'current-line'
-          'body': 'current-line'
-    
-        'curry':
-          'prefix': 'curry'
-          'body': 'curry <func> <exp>'
-    
-        'date':
-          'prefix': 'date'
-          'body': 'date '
-    
-        'date-list':
-          'prefix': 'date-list'
-          'body': 'date-list <int-seconds> [<int-index>]'
-    
-        'date-parse':
-          'prefix': 'date-parse'
-          'body': 'date-parse <str-date> <str-format>'
-    
-        'date-value':
-          'prefix': 'date-value'
-          'body': 'date-value <int-year> <int-month> <int-day> [<int-hour> <int-min> <int-sec>] '
-    
-        'debug':
-          'prefix': 'debug'
-          'body': 'debug <func>'
-    
-        'dec':
-          'prefix': 'dec'
-          'body': 'dec <place> [<num>]'
-    
-        'def-new':
-          'prefix': 'def-new'
-          'body': 'def-new <sym-source> [<sym-target>]'
-    
-        'default':
-          'prefix': 'default'
-          'body': 'default <context>'
-    
-        'define':
-          'prefix': 'define'
-          'body': 'define  <sym-name> [<sym-param-1>  ]  [<body-1>  ] '
-    
-        'define-macro':
-          'prefix': 'define-macro'
-          'body': 'define-macro  <sym-name> [<sym-param-1>  ]  <body> '
-    
-        'delete':
-          'prefix': 'delete'
-          'body': 'delete <symbol> [<bool>] '
-    
-        'delete-file':
-          'prefix': 'delete-file'
-          'body': 'delete-file <str-file-name>'
-    
-        'delete-file':
-          'prefix': 'delete-file'
-          'body': 'delete-file <str-url>'
-    
-        'destroy':
-          'prefix': 'destroy'
-          'body': 'destroy <int-pid> '
-    
-        'det':
-          'prefix': 'det'
-          'body': 'det <matrix> [<float-pivot>]'
-    
-        'device':
-          'prefix': 'device'
-          'body': 'device [<int-handle>]'
-    
-        'difference':
-          'prefix': 'difference'
-          'body': 'difference <list-A> <list-B> '
-    
-        'directory':
-          'prefix': 'directory'
-          'body': 'directory [<str-path>] '
-    
-        'directory?':
-          'prefix': 'directory?'
-          'body': 'directory? <str-path>'
-    
-        'div':
-          'prefix': 'div'
-          'body': 'div <num-1> <num-2> [<num-3>  ] '
-    
-        'do-until':
-          'prefix': 'do-until'
-          'body': 'do-until <exp-condition> [<body>]'
-    
-        'do-while':
-          'prefix': 'do-while'
-          'body': 'do-while <exp-condition body>'
-    
-        'doargs':
-          'prefix': 'doargs'
-          'body': 'doargs  <sym> [<exp-break>] < body>'
-    
-        'dolist':
-          'prefix': 'dolist'
-          'body': 'dolist  <sym>  <list> [<exp-break>] < body>'
-    
-        'dostring':
-          'prefix': 'dostring'
-          'body': 'dostring  <sym>  <string> [<exp-break>]  <body>'
-    
-        'dotimes':
-          'prefix': 'dotimes'
-          'body': 'dotimes  <sym-var> <int-count> [<exp-break>]  <body>'
-    
-        'dotree':
-          'prefix': 'dotree'
-          'body': 'dotree  <sym> <sym-context> [<bool>]  <body>'
-    
-        'dump':
-          'prefix': 'dump'
-          'body': 'dump [<exp>]'
-    
-        'dup':
-          'prefix': 'dup'
-          'body': 'dup <exp> <int-n> [<bool>] '
-    
-        'empty?':
-          'prefix': 'empty?'
-          'body': 'empty? <exp> '
-    
-        'encrypt':
-          'prefix': 'encrypt'
-          'body': 'encrypt <str-source> <str-pad>'
-    
-        'ends-with':
-          'prefix': 'ends-with'
-          'body': 'ends-with <str-data> <str-key> [<num-option>] '
-    
-        'env':
-          'prefix': 'env'
-          'body': 'env '
-    
-        'erf':
-          'prefix': 'erf'
-          'body': 'erf <num>'
-    
-        'error-event':
-          'prefix': 'error-event'
-          'body': 'error-event <sym-event-handler | func-event-handler>|<sym-event-handler | func-event-handler>'
-    
-        'eval':
-          'prefix': 'eval'
-          'body': 'eval <exp>'
-    
-        'eval-string':
-          'prefix': 'eval-string'
-          'body': 'eval-string <str-source> [<sym-context> [<exp-error> [<int-offset>]]]'
-    
-        'even?':
-          'prefix': 'even?'
-          'body': 'even? <int-number>'
-    
-        'exec':
-          'prefix': 'exec'
-          'body': 'exec <str-process> '
-    
-        'exists':
-          'prefix': 'exists'
-          'body': 'exists <func-condition> <list>'
-    
-        'exit':
-          'prefix': 'exit'
-          'body': 'exit [<int>]'
-    
-        'exp':
-          'prefix': 'exp'
-          'body': 'exp <num>'
-    
-        'expand':
-          'prefix': 'expand'
-          'body': 'expand <exp> <sym-1> [<sym-2>  ] '
-    
-        'expand':
-          'prefix': 'expand'
-          'body': 'expand <list> <list-assoc> [<bool>]'
-    
-        'expand':
-          'prefix': 'expand'
-          'body': 'expand <list>'
-    
-        'explode':
-          'prefix': 'explode'
-          'body': 'explode <str> [<int-chunk> [<bool>]] '
-    
-        'extend':
-          'prefix': 'extend'
-          'body': 'extend <list-1> [<list-2>  ] '
-    
-        'factor':
-          'prefix': 'factor'
-          'body': 'factor <int>'
-    
-        'fft':
-          'prefix': 'fft'
-          'body': 'fft <list-num>'
-    
-        'file-info':
-          'prefix': 'file-info'
-          'body': 'file-info <str-name> [<int-index> [<bool-flag>]]'
-    
-        'file?':
-          'prefix': 'file?'
-          'body': 'file? <str-path-name> [<bool>]'
-    
-        'filter':
-          'prefix': 'filter'
-          'body': 'filter <exp-predicate> <exp-list>'
-    
-        'find':
-          'prefix': 'find'
-          'body': 'find <exp-key> <list> [<func-compare> | <int-regex-option>] '
-    
-        'find-all':
-          'prefix': 'find-all'
-          'body': 'find-all <str-regex-pattern> <str-text> [<exp> [<int-regex-option>]] '
-    
-        'first':
-          'prefix': 'first'
-          'body': 'first <list> '
-    
-        'flat':
-          'prefix': 'flat'
-          'body': 'flat <list> [<int-level>]'
-    
-        'float':
-          'prefix': 'float'
-          'body': 'float <exp> [<exp-default>]'
-    
-        'float?':
-          'prefix': 'float?'
-          'body': 'float? <exp>'
-    
-        'floor':
-          'prefix': 'floor'
-          'body': 'floor <number>'
-    
-        'flt':
-          'prefix': 'flt'
-          'body': 'flt <number>'
-    
-        'fn':
-          'prefix': 'fn'
-          'body': 'fn  <list-parameters>  <exp-body>'
-    
-        'for':
-          'prefix': 'for'
-          'body': 'for  <sym> <num-from> <num-to> [<num-step> [<exp-break>]]  <body>'
-    
-        'for-all':
-          'prefix': 'for-all'
-          'body': 'for-all <func-condition> <list>'
-    
-        'fork':
-          'prefix': 'fork'
-          'body': 'fork <exp>'
-    
-        'format':
-          'prefix': 'format'
-          'body': 'format <str-format exp-data-1> [<exp-data-2>  ] '
-    
-        'fv':
-          'prefix': 'fv'
-          'body': 'fv <num-rate> <num-nper> <num-pmt> <num-pv> [<int-type>]'
-    
-        'gammai':
-          'prefix': 'gammai'
-          'body': 'gammai <num-a> <num-b>'
-    
-        'gammaln':
-          'prefix': 'gammaln'
-          'body': 'gammaln <num-x>'
-    
-        'gcd':
-          'prefix': 'gcd'
-          'body': 'gcd <int-1> [<int-2>  ]'
-    
-        'get-char':
-          'prefix': 'get-char'
-          'body': 'get-char <int-address>'
-    
-        'get-float':
-          'prefix': 'get-float'
-          'body': 'get-float <int-address>'
-    
-        'get-int':
-          'prefix': 'get-int'
-          'body': 'get-int <int-address>'
-    
-        'get-long':
-          'prefix': 'get-long'
-          'body': 'get-long <int-address>'
-    
-        'get-string':
-          'prefix': 'get-string'
-          'body': 'get-string <int-address>'
-    
-        'get-url':
-          'prefix': 'get-url'
-          'body': 'get-url <str-url> [<str-option>] [<int-timeout> [<str-header>]]'
-    
-        'global':
-          'prefix': 'global'
-          'body': 'global <sym-1> [<sym-2>  ]'
-    
-        'global?':
-          'prefix': 'global?'
-          'body': 'global? <sym>'
-    
-        'if':
-          'prefix': 'if'
-          'body': 'if <exp-condition> <exp-1> [<exp-2>] '
-    
-        'if-not':
-          'prefix': 'if-not'
-          'body': 'if-not <exp-condition> <exp-1> [<exp-2>]'
-    
-        'ifft':
-          'prefix': 'ifft'
-          'body': 'ifft <list-num>'
-    
-        'import':
-          'prefix': 'import'
-          'body': 'import <str-lib-name> <str-function-name> ["cdecl"] '
-    
-        'inc':
-          'prefix': 'inc'
-          'body': 'inc <place> [<num>]'
-    
-        'index':
-          'prefix': 'index'
-          'body': 'index <exp-predicate> <exp-list>'
-    
-        'inf?':
-          'prefix': 'inf?'
-          'body': 'inf? <float>'
-    
-        'int':
-          'prefix': 'int'
-          'body': 'int <exp> [<exp-default> [<int-base>]]'
-    
-        'integer?':
-          'prefix': 'integer?'
-          'body': 'integer? <exp>'
-    
-        'intersect':
-          'prefix': 'intersect'
-          'body': 'intersect <list-A> <list-B> '
-    
-        'invert':
-          'prefix': 'invert'
-          'body': 'invert <matrix> [<float-pivot>]'
-    
-        'irr':
-          'prefix': 'irr'
-          'body': 'irr <list-amounts> [<list-times> [<num-guess>]]'
-    
-        'json-error':
-          'prefix': 'json-error'
-          'body': 'json-error'
-    
-        'json-parse':
-          'prefix': 'json-parse'
-          'body': 'json-parse <str-json-data>'
-    
-        'join':
-          'prefix': 'join'
-          'body': 'join <list-of-strings> [<str-joint> [<bool-trail-joint>]]'
-    
-        'kmeans-query':
-          'prefix': 'kmeans-query'
-          'body': 'kmeans-query <list-data> <matrix-centroids> '
-    
-        'kmeans-train':
-          'prefix': 'kmeans-train'
-          'body': 'kmeans-train <matrix-data> <int-k> <context> [<matrix-centroids>]'
-    
-        'lambda?':
-          'prefix': 'lambda?'
-          'body': 'lambda? <exp>'
-    
-        'last':
-          'prefix': 'last'
-          'body': 'last <list> '
-    
-        'last-error':
-          'prefix': 'last-error'
-          'body': 'last-error '
-    
-        'legal?':
-          'prefix': 'legal?'
-          'body': 'legal? <str>'
-    
-        'length':
-          'prefix': 'length'
-          'body': 'length <exp>'
-    
-        'let':
-          'prefix': 'let'
-          'body': 'let   <sym1> [<exp-init1>]  [ <sym2> [<exp-init2>]   ]  <body> '
-    
-        'letex':
-          'prefix': 'letex'
-          'body': 'letex   <sym1> [<exp-init1>]  [ <sym2> [<exp-init2>]   ]  <body> '
-    
-        'letn':
-          'prefix': 'letn'
-          'body': 'letn   <sym1> [<exp-init1>]  [ <sym2> [<exp-init2>]   ]  <body> '
-    
-        'list':
-          'prefix': 'list'
-          'body': 'list <exp-1> [<exp-2>  ]'
-    
-        'list?':
-          'prefix': 'list?'
-          'body': 'list? <exp>'
-    
-        'load':
-          'prefix': 'load'
-          'body': 'load <str-file-name-1> [<str-file-name-2>  ] [<sym-context>]'
-    
-        'local':
-          'prefix': 'local'
-          'body': 'local  <sym-1> [<sym-2>  ]  <body>'
-    
-        'log':
-          'prefix': 'log'
-          'body': 'log <num> '
-    
-        'lookup':
-          'prefix': 'lookup'
-          'body': 'lookup <exp-key> <list-assoc> [<int-index> [<exp-default>]]'
-    
-        'lower-case':
-          'prefix': 'lower-case'
-          'body': 'lower-case <str>'
-    
-        'macro?':
-          'prefix': 'macro?'
-          'body': 'macro? <exp>'
-    
-        'main-args':
-          'prefix': 'main-args'
-          'body': 'main-args '
-    
-        'make-dir':
-          'prefix': 'make-dir'
-          'body': 'make-dir <str-dir-name> [<int-mode>]'
-    
-        'map':
-          'prefix': 'map'
-          'body': 'map <exp-functor> <list-args-1> [<list-args-2>  ]'
-    
-        'mat':
-          'prefix': 'mat'
-          'body': 'mat <+<*> | <-<*> | <*<*> | </<*> <matrix-A matrix-B<*> '
-    
-        'match':
-          'prefix': 'match'
-          'body': 'match <list-pattern> <list-match> [<bool>]'
-    
-        'max':
-          'prefix': 'max'
-          'body': 'max <num-1> [<num-2>  ]'
-    
-        'member':
-          'prefix': 'member'
-          'body': 'member <exp> <list> '
-    
-        'min':
-          'prefix': 'min'
-          'body': 'min <num-1> [<num-2>  ]'
-    
-        'mod':
-          'prefix': 'mod'
-          'body': 'mod <num-1> <num-2> [<num-3>  ] '
-    
-        'mul':
-          'prefix': 'mul'
-          'body': 'mul <num-1> <num-2> [<num-3>  ]'
-    
-        'multiply':
-          'prefix': 'multiply'
-          'body': 'multiply <matrix-A> <matrix-B>'
-    
-        'net-accept':
-          'prefix': 'net-accept'
-          'body': 'net-accept <int-socket>'
-    
-        'net-close':
-          'prefix': 'net-close'
-          'body': 'net-close <int-socket> [<true>]'
-    
-        'net-connect':
-          'prefix': 'net-connect'
-          'body': 'net-connect <str-remote-host> <int-port> [<int-timeout-ms>] '
-    
-        'net-error':
-          'prefix': 'net-error'
-          'body': 'net-error '
-    
-        'net-eval':
-          'prefix': 'net-eval'
-          'body': 'net-eval <str-host> <int-port> <exp> [<int-timeout> [<func-handler>]] '
-    
-        'net-interface':
-          'prefix': 'net-interface'
-          'body': 'net-interface <str-ip-addr> '
-    
-        'net-ipv':
-          'prefix': 'net-ipv'
-          'body': 'net-ipv <int-version> '
-    
-        'net-listen':
-          'prefix': 'net-listen'
-          'body': 'net-listen <int-port> [<str-ip-addr> [<str-mode>]] '
-    
-        'net-local':
-          'prefix': 'net-local'
-          'body': 'net-local <int-socket>'
-    
-        'net-lookup':
-          'prefix': 'net-lookup'
-          'body': 'net-lookup <str-ip-number> '
-    
-        'net-packet':
-          'prefix': 'net-packet'
-          'body': 'net-packet <str-packet>'
-    
-        'net-peek':
-          'prefix': 'net-peek'
-          'body': 'net-peek <int-socket>'
-    
-        'net-peer':
-          'prefix': 'net-peer'
-          'body': 'net-peer <int-socket>'
-    
-        'net-ping':
-          'prefix': 'net-ping'
-          'body': 'net-ping <str-address> [<int-timeout> [<int-count> <bool>]]] '
-    
-        'net-receive':
-          'prefix': 'net-receive'
-          'body': 'net-receive <int-socket> <sym-buffer> <int-max-bytes> [<wait-string>]'
-    
-        'net-receive-from':
-          'prefix': 'net-receive-from'
-          'body': 'net-receive-from <int-socket> <int-max-size>'
-    
-        'net-receive-udp':
-          'prefix': 'net-receive-udp'
-          'body': 'net-receive-udp <int-port> <int-maxsize> [<int-microsec> [<str-addr-if>]]'
-    
-        'net-select':
-          'prefix': 'net-select'
-          'body': 'net-select <int-socket> <str-mode> <int-micro-seconds> '
-    
-        'net-send':
-          'prefix': 'net-send'
-          'body': 'net-send <int-socket> <str-buffer> [<int-num-bytes>]'
-    
-        'net-send-to':
-          'prefix': 'net-send-to'
-          'body': 'net-send-to <str-remotehost> <int-remoteport> <str-buffer> <int-socket>'
-    
-        'net-send-udp':
-          'prefix': 'net-send-udp'
-          'body': 'net-send-udp <str-remotehost> <int-remoteport> <str-buffer> [<bool>]'
-    
-        'net-service':
-          'prefix': 'net-service'
-          'body': 'net-service <str-service> <str-protocol> '
-    
-        'net-sessions':
-          'prefix': 'net-sessions'
-          'body': 'net-sessions'
-    
-        'new':
-          'prefix': 'new'
-          'body': 'new <context-source> <sym-context-target> [<bool>] '
-    
-        'nil?':
-          'prefix': 'nil?'
-          'body': 'nil? <exp>'
-    
-        'normal':
-          'prefix': 'normal'
-          'body': 'normal <float-mean> <float-stdev> <int-n> '
-    
-        'not':
-          'prefix': 'not'
-          'body': 'not <exp>'
-    
-        'now':
-          'prefix': 'now'
-          'body': 'now [<int-minutes-offset> [<int-index>]]'
-    
-        'nper':
-          'prefix': 'nper'
-          'body': 'nper <num-interest> <num-pmt> <num-pv> 
-[<num-fv> [<int-type>]]'
-    
-        'npv':
-          'prefix': 'npv'
-          'body': 'npv <num-interest> <list-values>'
-    
-        'nth':
-          'prefix': 'nth'
-          'body': 'nth <int-index> <list> '
-    
-        'null?':
-          'prefix': 'null?'
-          'body': 'null? <exp>'
-    
-        'number?':
-          'prefix': 'number?'
-          'body': 'number? <exp>'
-    
-        'odd?':
-          'prefix': 'odd?'
-          'body': 'odd? <int-number>'
-    
-        'open':
-          'prefix': 'open'
-          'body': 'open <str-path-file> <str-access-mode> [<str-option>]'
-    
-        'or':
-          'prefix': 'or'
-          'body': 'or <exp-1> [<exp-2>  ]'
-    
-        'ostype':
-          'prefix': 'ostype'
-          'body': 'ostype'
-    
-        'pack':
-          'prefix': 'pack'
-          'body': 'pack <str-format> <exp-1> [<exp-2>  ] '
-    
-        'parse':
-          'prefix': 'parse'
-          'body': 'parse <str-data> [<str-break>  [<int-option>]]'
-    
-        'peek':
-          'prefix': 'peek'
-          'body': 'peek <int-handle>'
-    
-        'pipe':
-          'prefix': 'pipe'
-          'body': 'pipe'
-    
-        'pop':
-          'prefix': 'pop'
-          'body': 'pop <list> [<int-index-1> [<int-index-2>  ]] '
-    
-        'pop-assoc':
-          'prefix': 'pop-assoc'
-          'body': 'pop-assoc <exp-key> <list-assoc> '
-    
-        'post-url':
-          'prefix': 'post-url'
-          'body': 'post-url <str-url> <str-content> [<str-content-type> [<str-option>] [<int-timeout> [ <str-header>]]]'
-    
-        'pow':
-          'prefix': 'pow'
-          'body': 'pow <num-1> <num-2 > [<num-3>  ] '
-    
-        'prefix':
-          'prefix': 'prefix'
-          'body': 'prefix <sym>'
-    
-        'pretty-print':
-          'prefix': 'pretty-print'
-          'body': 'pretty-print [<int-length> [<str-tab> [<str-fp-format>]]'
-    
-        'primitive?':
-          'prefix': 'primitive?'
-          'body': 'primitive? <exp>'
-    
-        'print':
-          'prefix': 'print'
-          'body': 'print <exp-1> [<exp-2>  ]'
-    
-        'println':
-          'prefix': 'println'
-          'body': 'println <exp-1> [<exp-2>  ]'
-    
-        'prob-chi2':
-          'prefix': 'prob-chi2'
-          'body': 'prob-chi2 <num-chi2> <int-df>'
-    
-        'prob-f':
-          'prefix': 'prob-f'
-          'body': 'prob-f <num-f> <int-df1> <int-df2>'
-    
-        'prob-t':
-          'prefix': 'prob-t'
-          'body': 'prob-t <num-t> <int-df1>'
-    
-        'prob-z':
-          'prefix': 'prob-z'
-          'body': 'prob-z <num-z>'
-    
-        'process':
-          'prefix': 'process'
-          'body': 'process <str-command> '
-    
-        'prompt-event':
-          'prefix': 'prompt-event'
-          'body': 'prompt-event <sym-event-handler> | <func-event-handler>'
-    
-        'protected?':
-          'prefix': 'protected?'
-          'body': 'protected? <sym>'
-    
-        'push':
-          'prefix': 'push'
-          'body': 'push <exp> <list> [<int-index-1> [<int-index-2>  ]] '
-    
-        'put-url':
-          'prefix': 'put-url'
-          'body': 'put-url <str-url> <str-content> [<str-option>] [<int-timeout> [<str-header>]]'
-    
-        'pv':
-          'prefix': 'pv'
-          'body': 'pv <num-int> <num-nper> <num-pmt> 
-[<num-fv> [<int-type>]]'
-    
-        'quote':
-          'prefix': 'quote'
-          'body': 'quote <exp>'
-    
-        'quote?':
-          'prefix': 'quote?'
-          'body': 'quote? <exp>'
-    
-        'rand':
-          'prefix': 'rand'
-          'body': 'rand <int-range> [<int-N>]'
-    
-        'random':
-          'prefix': 'random'
-          'body': 'random <float-offset> <float-scale> <int-n> '
-    
-        'randomize':
-          'prefix': 'randomize'
-          'body': 'randomize <list> [<bool>]'
-    
-        'read':
-          'prefix': 'read'
-          'body': 'read <int-file> <sym-buffer> <int-size> [<str-wait>]'
-    
-        'read-char':
-          'prefix': 'read-char'
-          'body': 'read-char [<int-file>]'
-    
-        'read-expr':
-          'prefix': 'read-expr'
-          'body': 'read-expr <str-source> [<sym-context> [<exp-error> [<int-offset>]]]'
-    
-        'read-file':
-          'prefix': 'read-file'
-          'body': 'read-file <str-file-name>'
-    
-        'read-key':
-          'prefix': 'read-key'
-          'body': 'read-key'
-    
-        'read-line':
-          'prefix': 'read-line'
-          'body': 'read-line [<int-file>]'
-    
-        'read-utf8':
-          'prefix': 'read-utf8'
-          'body': 'read-utf8 <int-file>'
-    
-        'reader-event':
-          'prefix': 'reader-event'
-          'body': 'reader-event [<sym-event-handler | func-event-handler>|<sym-event-handler | func-event-handler>] '
-    
-        'real-path':
-          'prefix': 'real-path'
-          'body': 'real-path [<str-path>] '
-    
-        'receive':
-          'prefix': 'receive'
-          'body': 'receive <int-pid> <sym-message> '
-    
-        'ref':
-          'prefix': 'ref'
-          'body': 'ref <exp-key> <list> [<func-compare> [true]]'
-    
-        'ref-all':
-          'prefix': 'ref-all'
-          'body': 'ref-all <exp-key> <list> [<func-compare> [true]]'
-    
-        'regex':
-          'prefix': 'regex'
-          'body': 'regex <str-pattern> <str-text> [<int-option> [<int-offset>]]'
-    
-        'regex-comp':
-          'prefix': 'regex-comp'
-          'body': 'regex-comp <str-pattern> [<int-option>]'
-    
-        'remove-dir':
-          'prefix': 'remove-dir'
-          'body': 'remove-dir <str-path>'
-    
-        'rename-file':
-          'prefix': 'rename-file'
-          'body': 'rename-file <str-path-old> <str-path-new>'
-    
-        'replace':
-          'prefix': 'replace'
-          'body': 'replace <exp-key> <list> <exp-replacement> [<func-compare>] '
-    
-        'reset':
-          'prefix': 'reset'
-          'body': 'reset '
-    
-        'rest':
-          'prefix': 'rest'
-          'body': 'rest <list> '
-    
-        'reverse':
-          'prefix': 'reverse'
-          'body': 'reverse <list> '
-    
-        'rotate':
-          'prefix': 'rotate'
-          'body': 'rotate <list> [<int-count>] '
-    
-        'round':
-          'prefix': 'round'
-          'body': 'round <number> [<int-digits>]'
-    
-        'save':
-          'prefix': 'save'
-          'body': 'save <str-file> '
-    
-        'search':
-          'prefix': 'search'
-          'body': 'search <int-file> <str-search> [<bool-flag> [<int-options>]]'
-    
-        'seed':
-          'prefix': 'seed'
-          'body': 'seed <int-seed>'
-    
-        'self':
-          'prefix': 'self'
-          'body': 'self [<int-index>  ]'
-    
-        'seek':
-          'prefix': 'seek'
-          'body': 'seek <int-file> [<int-position>]'
-    
-        'select':
-          'prefix': 'select'
-          'body': 'select <list> <list-selection> '
-    
-        'semaphore':
-          'prefix': 'semaphore'
-          'body': 'semaphore '
-    
-        'send':
-          'prefix': 'send'
-          'body': 'send <int-pid> <exp> '
-    
-        'sequence':
-          'prefix': 'sequence'
-          'body': 'sequence <num-start> <num-end> [<num-step>]'
-    
-        'series':
-          'prefix': 'series'
-          'body': 'series <num-start> <num-factor> <num-count> '
-    
-        'set':
-          'prefix': 'set'
-          'body': 'set <sym-1> <exp-1> [<sym-2> <exp-2>  ]'
-    
-        'set-locale':
-          'prefix': 'set-locale'
-          'body': 'set-locale [<str-locale> [<int-category>]]'
-    
-        'set-ref':
-          'prefix': 'set-ref'
-          'body': 'set-ref <exp-key> <list> <exp-replacement> [<func-compare>]'
-    
-        'set-ref-all':
-          'prefix': 'set-ref-all'
-          'body': 'set-ref-all <exp-key> <list>  <exp-replacement> [<func-compare>]'
-    
-        'setq':
-          'prefix': 'setq'
-          'body': 'setq <place-1> <exp-1> [<place-2> <exp-2>  ]'
-    
-        'sgn':
-          'prefix': 'sgn'
-          'body': 'sgn <num> '
-    
-        'share':
-          'prefix': 'share'
-          'body': 'share '
-    
-        'signal':
-          'prefix': 'signal'
-          'body': 'signal <int-signal> <sym-event-handler> | <func-event-handler> '
-    
-        'silent':
-          'prefix': 'silent'
-          'body': 'silent [<exp-1> [<exp-2>  ]]'
-    
-        'sin':
-          'prefix': 'sin'
-          'body': 'sin <num-radians>'
-    
-        'sinh':
-          'prefix': 'sinh'
-          'body': 'sinh <num-radians>'
-    
-        'sleep':
-          'prefix': 'sleep'
-          'body': 'sleep <num-milliseconds>'
-    
-        'slice':
-          'prefix': 'slice'
-          'body': 'slice <list> <int-index> [<int-length>] '
-    
-        'sort':
-          'prefix': 'sort'
-          'body': 'sort <list> [<func-compare>] '
-    
-        'source':
-          'prefix': 'source'
-          'body': 'source '
-    
-        'spawn':
-          'prefix': 'spawn'
-          'body': 'spawn <sym> <exp> [true]'
-    
-        'sqrt':
-          'prefix': 'sqrt'
-          'body': 'sqrt <num>'
-    
-        'starts-with':
-          'prefix': 'starts-with'
-          'body': 'starts-with <str> < str-key> [<num-option>] '
-    
-        'stats':
-          'prefix': 'stats'
-          'body': 'stats <list-vector>'
-    
-        'string':
-          'prefix': 'string'
-          'body': 'string <exp-1> [<exp-2>  ]'
-    
-        'string?':
-          'prefix': 'string?'
-          'body': 'string? <exp>'
-    
-        'struct':
-          'prefix': 'struct'
-          'body': 'struct <symbol> [<str-data-type>  ]'
-    
-        'sub':
-          'prefix': 'sub'
-          'body': 'sub <num-1> [<num-2>  ]'
-    
-        'swap':
-          'prefix': 'swap'
-          'body': 'swap <place-1> <place-2>'
-    
-        'sym':
-          'prefix': 'sym'
-          'body': 'sym <string> [<sym-context> [<nil-flag>]] '
-    
-        'symbol?':
-          'prefix': 'symbol?'
-          'body': 'symbol? <exp>'
-    
-        'symbols':
-          'prefix': 'symbols'
-          'body': 'symbols [<context>]'
-    
-        'sync':
-          'prefix': 'sync'
-          'body': 'sync <int-timeout> [<func-inlet>] '
-    
-        'sys-error':
-          'prefix': 'sys-error'
-          'body': 'sys-error '
-    
-        'sys-info':
-          'prefix': 'sys-info'
-          'body': 'sys-info [<int-idx>]'
-    
-        't-test':
-          'prefix': 't-test'
-          'body': 't-test <list-vector> <number-value> '
-    
-        'tan':
-          'prefix': 'tan'
-          'body': 'tan <num-radians>'
-    
-        'tanh':
-          'prefix': 'tanh'
-          'body': 'tanh <num-radians>'
-    
-        'term':
-          'prefix': 'term'
-          'body': 'term <symbol>'
-    
-        'throw':
-          'prefix': 'throw'
-          'body': 'throw <exp>'
-    
-        'throw-error':
-          'prefix': 'throw-error'
-          'body': 'throw-error <exp>'
-    
-        'time':
-          'prefix': 'time'
-          'body': 'time <exp> [<int-count>'
-    
-        'time-of-day':
-          'prefix': 'time-of-day'
-          'body': 'time-of-day'
-    
-        'timer':
-          'prefix': 'timer'
-          'body': 'timer <sym-event-handler | func-event-handler>|<sym-event-handler | func-event-handler> <num-seconds> [<int-option>] '
-    
-        'title-case':
-          'prefix': 'title-case'
-          'body': 'title-case <str> <[bool]>'
-    
-        'trace':
-          'prefix': 'trace'
-          'body': 'trace [<bool>]'
-    
-        'trace-highlight':
-          'prefix': 'trace-highlight'
-          'body': 'trace-highlight <str-pre> <str-post> [<str-header> <str-footer>]'
-    
-        'transpose':
-          'prefix': 'transpose'
-          'body': 'transpose <matrix>'
-    
-        'trim':
-          'prefix': 'trim'
-          'body': 'trim <str> [<str-char>] '
-    
-        'true?':
-          'prefix': 'true?'
-          'body': 'true? <exp>'
-    
-        'unicode':
-          'prefix': 'unicode'
-          'body': 'unicode <str-utf8>'
-    
-        'unify':
-          'prefix': 'unify'
-          'body': 'unify <exp-1> <exp-2> [<list-env>]'
-    
-        'union':
-          'prefix': 'union'
-          'body': 'union <list-1> <list-2> [<list-3>  ]'
-    
-        'unique':
-          'prefix': 'unique'
-          'body': 'unique <list>'
-    
-        'unless':
-          'prefix': 'unless'
-          'body': 'unless <exp-condition> <body>'
-    
-        'unpack':
-          'prefix': 'unpack'
-          'body': 'unpack <str-format> <str-addr-packed> '
-    
-        'until':
-          'prefix': 'until'
-          'body': 'until <exp-condition> [<body>]'
-    
-        'upper-case':
-          'prefix': 'upper-case'
-          'body': 'upper-case <str>'
-    
-        'utf8':
-          'prefix': 'utf8'
-          'body': 'utf8 <str-unicode>'
-    
-        'utf8len':
-          'prefix': 'utf8len'
-          'body': 'utf8len <str>'
-    
-        'uuid':
-          'prefix': 'uuid'
-          'body': 'uuid [<str-node>]'
-    
-        'wait-pid':
-          'prefix': 'wait-pid'
-          'body': 'wait-pid <int-pid> [<int-options> | <tt>nil</tt>]'
-    
-        'when':
-          'prefix': 'when'
-          'body': 'when <exp-condition> <body>'
-    
-        'while':
-          'prefix': 'while'
-          'body': 'while <exp-condition> <body>'
-    
-        'write':
-          'prefix': 'write'
-          'body': 'write <int-file> <str-buffer> [<int-size>] '
-    
-        'write-char':
-          'prefix': 'write-char'
-          'body': 'write-char <int-file> <int-byte1> [<int-byte2>  ]'
-    
-        'write-file':
-          'prefix': 'write-file'
-          'body': 'write-file <str-file-name> <str-buffer>'
-    
-        'write-line':
-          'prefix': 'write-line'
-          'body': 'write-line [<int-file> [<str>]] '
-    
-        'xfer-event':
-          'prefix': 'xfer-event'
-          'body': 'xfer-event <sym-event-handler> | <func-event-handler>'
-    
-        'xml-error':
-          'prefix': 'xml-error'
-          'body': 'xml-error'
-    
-        'xml-parse':
-          'prefix': 'xml-parse'
-          'body': 'xml-parse <string-xml> [<int-options> [<sym-context> [<func-callback>]]]'
-    
-        'xml-type-tags':
-          'prefix': 'xml-type-tags'
-          'body': 'xml-type-tags [<exp-text-tag> <exp-cdata-tag> <exp-comment-tag> <exp-element-tags>]'
-    
-        'zero?':
-          'prefix': 'zero?'
-          'body': 'zero? <exp>'
-    
+# version of 2014-03-12 12:43:10
+
+'fileTypes': [
+  'lsp'
+]
+'name': 'newLISP'
+'firstLineMatch': '^#!/.*\\bnewlisp\\b',
+'foldingStartMarker': '(?x)^ [ \\t]* \\(\n\t  (?<par>\n\t    ( [^()\\n]++ | \\( \\g<par> \\)? )*+\n\t  )\n\t$'
+'foldingStopMarker': '^\\s*$'
+
+'patterns': [
+
+# strings
+# {braced string with {one level of} nesting only}
+   {
+     'begin': '{'
+     'beginCaptures':
+       '0':
+         'name': 'punctuation.definition.string.begin.newlisp'
+     'end': '}'
+     'endCaptures':
+       '0':
+         'name': 'punctuation.definition.string.end.newlisp'
+     'name': 'string.quoted.braced.newlisp'
+     'patterns': [
+       {
+         'match': '\\\\.'
+         'name': 'string.quoted.braced.newlisp'
+       }
+       {
+         'begin': '{'
+         'beginCaptures':
+           '1':
+             'name': 'punctuation.definition.string.begin.newlisp'
+         'end': '}'
+         'endCaptures':
+           '1':
+             'name': 'punctuation.definition.string.end.newlisp'
+       }
+     ]
+  }
+
+# "quoted string"
+  {
+    'begin': '"'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.newlisp'
+    'end': '"'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.newlisp'
+    'name': 'string.quoted.double.newlisp'
+    'patterns': [
+      {
+        'match': '\\\\.'
+      }
+    ]
+  }
+
+# [text] string
+  {
+    'begin': '\\[text\\]'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.newlisp'
+    'end': '\\[\\/text\\]'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.newlisp'
+    'name': 'string.quoted.tagged.newlisp'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'string.quoted.tagged.newlisp'
+      }
+    ]
+  }
+
+  {
+    'match': ';+ (mark|\\!).*'
+    'name': 'comment.line.marker.newlisp'
+  }
+
+  {
+    'match': ';.*TODO:.*'
+    'name': 'comment.line.todo.newlisp'
+  }
+
+  {
+    'match': '^;; .*$\\n?'
+    'name': 'comment.doc.newlisp'
+  }
+
+  {
+    'captures':
+      '1':
+        'name': 'punctuation.definition.comment.newlisp'
+    'match': '(;|#).*$\\n?'
+    'name': 'comment.line.semicolon.newlisp'
+  }
+
+  {
+    'captures':
+      '1':
+        'name': 'punctuation.definition.constant.newlisp'
+    'match': '(#)(\\w|[\\\\+-=<>\'"&#])+'
+    'name': 'constant.character.newlisp'
+  }
+
+  {
+    'captures':
+      '1':
+        'name': 'punctuation.definition.variable.newlisp'
+      '3':
+        'name': 'punctuation.definition.variable.newlisp'
+    'match': '(\\*)(\\S*)(\\*)'
+    'name': 'variable.other.global.newlisp'
+  }
+
+  {
+    'match': '\\('
+    'name': 'entity.paren.newlisp'
+  }
+
+  {
+    'match': '\\)'
+    'name': 'entity.paren.newlisp'
+  }
+
+  # it has been known for functions I'm still using to be deprecated ... they go here :)
+  {
+    'match': '\\b(?i:parse-date|nth-set|set-nth)\\b'
+    'name': 'invalid.deprecated.newlisp'
+  }
+
+# using lookahead and lookbehind
+# not starting just after - or word character, so they wont be highlighted when they occur in the middle of a string
+
+  # all functions ending "?" are here
+  {
+    'match': '\\b(array\\?|atom\\?|bigint\\?|context\\?|directory\\?|empty\\?|even\\?|file\\?|float\\?|global\\?|inf\\?|integer\\?|lambda\\?|legal\\?|list\\?|macro\\?|NaN\\?|nil\\?|null\\?|odd\\?|number\\?|primitive\\?|protected\\?|quote\\?|string\\?|symbol\\?|true\\?|zero\\?)'
+    'name': 'keyword.control.boolean-test.newlisp'
+  }
+
+  # in this section, storage, I've put things to do with definitions, setting values etc...
+  {
+    'match': '(?<!\\-)(Class|fn|context|define-macro|define|def-new|lambda-macro|lambda|macro|new|self|set-ref-all|set-ref|setf|setq|set-locale|set|Tree|MAIN)(?!\\-|\\w)'
+    'name': 'keyword.control.function.newlisp'
+  }
+
+  # all keywords useful for controlling the flow here
+
+  {
+    'match': '(?<!\\-|\\w)(abort|and|begin|case|catch|cond|if-not|if|do-until|do-while|doargs|dolist|dostring|dotimes|dotree|for-all|for|or|not|throw-error|throw|unless|until|when|while)(?!\\-|\\w)'
+    'name': 'keyword.control.newlisp'
+  }
+
+  # all other keywords here, hyphenated versions should come before unhyphenated ones
+  {
+    'match': '(?<!\\-|\\w)(abs|acos|acosh|add|address|amb|append-file|append|apply|args|array-list|array|asin|asinh|assoc|atan|atan2|atanh|base64-dec|base64-enc|bayes-query|bayes-train|beta|betai|bigint|bind|binomial|bits|callback|ceil|change-dir|char|chop|clean|close|command-event|cons|constant|copy-file|copy|corr|cos|cosh|count|cpymem|crc32|crit-chi2|crit-f|crit-t|crit-z|current-line|curry|date-list|date-parse|date-value|date|debug|dec|default|delete-file|delete-url|delete|destroy|det|device|difference|directory|div|dump|dup|encrypt|ends-with|env|erf|error-event|eval-string|eval|exec|exists|exit|exp|expand|explode|extend|factor|fft|file-info|filter|find-all|find|first|flat|float|floor|flt|fork|format|fv|gammai|gammaln|gcd|get-char|get-float|get-int|get-long|get-string|get-url|global|ifft|import|inc|index|int|integer|intersect|invert|irr|join|json-error|json-parse|kmeans-query|kmeans-train|last-error|last|length|let|letex|letn|list|load|local|log|lookup|lower-case|main-args|make-dir|map|mat|match|max|member|min|mod|module|mul|multiply|net-accept|net-close|net-connect|net-error|net-eval|net-interface|net-ipv|net-listen|net-local|net-lookup|net-packet|net-peek|net-peer|net-ping|net-receive-udp|net-receive-from|net-receive|net-select|net-send-to|net-send-udp|net-send|net-service|net-sessions|nil|normal|now|nper|npv|nth|open|ostype|pack|parse|parse-date|peek|pipe|pmt|pop-assoc|pop|post-url|pow|prefix|pretty-print|print|println|prob-chi2|prob-f|prob-t|prob-z|process|prompt-event|push|put-url|pv|quote|rand|random|randomize|read-buffer|read-char|read-expr|read-file|read-key|read-line|read-utf8|read|reader-event|real-path|receive|ref-all|ref|regex-comp|regex|remove-dir|rename-file|replace|reset|rest|reverse|rotate|round|save|search|seed|seek|select|semaphore|send|sequence|series|set-locale|sgn|share|signal|silent|sin|sinh|sleep|slice|sort|source|spawn|sqrt|starts-with|stats|string|struct|sub|swap|sym|symbols|syms|sync|sys-error|sys-info|t-test|tan|tanh|term|time-of-day|time|timer|title-case|trace-highlight|trace|transpose|trim|true|unicode|unify|union|unique|unpack|upper-case|utf8|utf8len|uuid|wait-pid|write-buffer|write-char|write-file|write-line|write|xfer-event|xml-error|xml-parse|xml-type-tags)(?!\\-|\\w)'
+    'name': 'keyword.other.newlisp'
+  }
+
+  # operator type things
+  {
+  'match': '(!|!=|\\$0|\\$10|\\$11|\\$12|\\$13|\\$14|\\$15|\\$2|\\$3|\\$4|\\$5|\\$6|\\$7|\\$8|\\$9|\\$1|\\$args|\\$count|\\$idx|\\$it|\\$main-args|\\$|--|\\||~|%|&|\\*|\\+|\\+\\+|\\-|\\-\\-|<|<<|<=|=|>|>=|>>|/|:|\\?|@|\\^)'
+  'name': 'keyword.operator.newlisp'
+  }
+
+# quoted symbol
+
+  {
+    'match': '(\\\'(\\w|-)+)'
+    'name': 'variable.other.quoted.newlisp'
+  }
+
+  # bracketed symbol names
+
+  {
+    'match': '\\[.*?\\]'
+    'name': 'variable.other.newlisp'
+  }
+
+  {
+    'match': '[+-]?\\b(((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f|ll|LL|ull|ULL)?)\\b'
+    'name': 'constant.numeric.newlisp'
+  }
+]
+
+'scopeName': 'source.newlisp'
