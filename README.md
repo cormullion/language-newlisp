@@ -27,7 +27,7 @@ Version 0.70: I'm currently fighting with the automatic parenthesis-closing (whi
 
 4  the closing parenthesis is added
 
-![animation](/Users/pete/projects/programming/language-newlisp/animation1.gif)
+![animation](https://github.com/cormullion/language-newlisp/blob/master/animation1.gif)
 
 But if you started typing inside an automatically-closed pair:
 
@@ -35,7 +35,7 @@ But if you started typing inside an automatically-closed pair:
 
 then you'll have too many final parentheses when the expansion of the snippet has finished.
 
-![animation](/Users/pete/projects/programming/language-newlisp/animation.gif)
+![animation](https://github.com/cormullion/language-newlisp/blob/master/animation.gif)
 
 In other words, the snippet assumes you've started with an opening parenthesis and has added an unwanted closing parenthesis for you.
 
