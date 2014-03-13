@@ -1,6 +1,6 @@
 {
   "name": "newlisp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "description": "newLISP (not Lisp) package for Atom editor (atom.io)",
   "repository": "https://github.com/atom/newlisp",

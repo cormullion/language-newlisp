@@ -1,4 +1,4 @@
-# version of 2014-03-12 14:53:38
+# version of 2014-03-13 16:54:21
 
 'fileTypes': [
   'lsp'
@@ -175,7 +175,15 @@
     'name': 'variable.other.quoted.newlisp'
   }
 
-  # bracketed symbol names
+# symbol
+
+  {
+    'match': '((\\w|-)+)'
+    'name': 'variable.other.newlisp'
+  }
+
+
+# bracketed symbol names
 
   {
     'match': '\\[.*?\\]'
