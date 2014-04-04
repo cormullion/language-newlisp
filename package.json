@@ -1,9 +1,9 @@
 {
-  "name": "newlisp",
-  "version": "0.0.2",
-  "private": true,
+  "name": "language-newlisp",
+  "version": "0.0.0",
+  "private": false,
   "description": "newLISP (not Lisp) package for Atom editor (atom.io)",
-  "repository": "https://github.com/atom/newlisp",
+  "repository": "https://github.com/atom/language-newlisp",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"

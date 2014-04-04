@@ -1,4 +1,4 @@
-# newLISP language support in Atom
+# language-newlisp: newLISP (not Lisp) language support in Atom
 
 version of 2014-03-14 19:18:38
 
