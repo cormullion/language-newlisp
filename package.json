@@ -1,6 +1,6 @@
 {
   "name": "language-newlisp",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": false,
   "description": "newLISP (not Lisp) package for Atom editor (atom.io)",
   "repository": "https://github.com/cormullion/language-newlisp",
@@ -8,6 +8,5 @@
   "engines": {
     "atom": ">0.50.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
