@@ -418,14 +418,6 @@
       'expand':
         'prefix': 'expand'
         'body': 'expand exp sym-1 [sym-2 ... ]) § (expand exp list-assoc [bool]) § (expand exp)'
-  
-      'expand':
-        'prefix': 'expand'
-        'body': 'expand list list-assoc [bool])'
-
-      'expand':
-        'prefix': 'expand'
-        'body': 'expand list)'
 
       'explode':
         'prefix': 'explode'

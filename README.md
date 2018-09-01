@@ -1,6 +1,6 @@
 # language-newlisp: newLISP (not Lisp) language support in Atom
 
-version of 2014-03-14 19:18:38
+version of 1st September 2018
 
 This package adds snippets and syntax highlighting for newLISP.
 
