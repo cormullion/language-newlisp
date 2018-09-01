@@ -1,6 +1,6 @@
 {
   "name": "language-newlisp",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": false,
   "description": "newLISP (not Lisp) package for Atom editor (atom.io)",
   "repository": "https://github.com/cormullion/language-newlisp",
